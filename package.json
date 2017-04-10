@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/alitaheri/material-ui-persian-date-picker-utils/issues"
   },
-  "homepage": "https://github.com/alitaheri/material-ui-persian-date-picker-utils#readme"
+  "homepage": "https://github.com/alitaheri/material-ui-persian-date-picker-utils#readme",
+  "dependencies": {
+    "moment-jalaali": "^0.6.1"
+  }
 }
