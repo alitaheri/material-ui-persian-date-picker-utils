@@ -5,7 +5,7 @@ be used by the material-ui's DatePicker component to correctly render
 a Persian calendar.
 
 Please refer to material-ui's
-[documentation page for DatePicker](http://localhost:3000/#/components/date-picker)
+[documentation page for DatePicker](http://www.material-ui.com/#/components/date-picker)
 under localized example to learn how to use it.
 
 
