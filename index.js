@@ -39,30 +39,48 @@ function getWeekArray(d, firstDayOfWeek) {
   return weekArray;
 }
 
-module.exports = {
+function getYear(date) {
+  return moment(date).jYear();
+}
+
+function setYear(date, year) {
+  return moment(date).jYear(year).toDate();
+}
+
+function addDays(date, days) {
+  return moment(date).add(days, 'days').toDate();
+}
+
+function addMonths(date, months) {
+  return moment(date).add(months, 'jMonth').toDate();
+}
+
+function addYears(date, years) {
+  return moment(date).add(years, 'jYear').toDate();
+}
+
+function getFirstDayOfMonth(date) {
+  return moment(date).jDate(1).toDate();
+}
+
+function monthDiff(date1, date2) {
+  var months = (moment(date1).jYear() - moment(date2).jYear()) * 12;
+  months += moment(date1).jMonth();
+  months -= moment(date2).jMonth();
+  return months;
+}
+
+var utils = {
   getWeekArray: getWeekArray,
-  getYear: function (date) {
-    return moment(date).jYear();
-  },
-  setYear: function (date, year) {
-    return moment(date).jYear(year).toDate();
-  },
-  addDays: function (date, days) {
-    return moment(date).add(days, 'days').toDate();
-  },
-  addMonths: function (date, months) {
-    return moment(date).add(months, 'jMonth').toDate();
-  },
-  addYears: function (date, years) {
-    return moment(date).add(years, 'jYear').toDate();
-  },
-  getFirstDayOfMonth: function (date) {
-    return moment(date).jDate(1).toDate();
-  },
-  monthDiff: function (date1, date2) {
-    var months = (moment(date1).jYear() - moment(date2).jYear()) * 12;
-    months += moment(date1).jMonth();
-    months -= moment(date2).jMonth();
-    return months;
-  }
+  getYear: getYear,
+  setYear: setYear,
+  addDays: addDays,
+  addMonths: addMonths,
+  addYears: addYears,
+  getFirstDayOfMonth: getFirstDayOfMonth,
+  monthDiff: monthDiff,
 };
+
+utils['default'] = utils;
+
+module.exports = utils;
