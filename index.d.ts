@@ -1,11 +1,11 @@
-export function getWeekArray(date: Date, firstDayOfWeek: number): (Date | null)[][];
-export function getYear(date: Date): number;
-export function setYear(date: Date, year: number): Date;
-export function addDays(date: Date, days: number): Date;
-export function addMonths(date: Date, months: number): Date;
-export function addYears(date: Date, years: number): Date;
-export function getFirstDayOfMonth(date: Date): Date;
-export function monthDiff(date1: Date, date2: Date): number;
+export declare function getWeekArray(date: Date, firstDayOfWeek: number): (Date | null)[][];
+export declare function getYear(date: Date): number;
+export declare function setYear(date: Date, year: number): Date;
+export declare function addDays(date: Date, days: number): Date;
+export declare function addMonths(date: Date, months: number): Date;
+export declare function addYears(date: Date, years: number): Date;
+export declare function getFirstDayOfMonth(date: Date): Date;
+export declare function monthDiff(date1: Date, date2: Date): number;
 
 export interface PersianUtils {
   getWeekArray: typeof getWeekArray;
@@ -18,6 +18,6 @@ export interface PersianUtils {
   monthDiff: typeof monthDiff;
 }
 
-const utils: PersianUtils;
+declare const utils: PersianUtils;
 
 export default utils;
